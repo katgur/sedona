@@ -1,0 +1,80 @@
+@import '../base.blocks/theme.scss';
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header__bar {
+    position: relative;
+    width: 100%;
+    padding: var(--indent-m) var(--indent-l);
+}
+
+.header__logo {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 140px;
+}
+
+.header__burger {
+    float: right;
+}
+
+.header__nav {
+    @include theme;
+    @include theme_color_accent;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.header__link {
+    @include theme_font_l;
+    padding: var(--indent-m) 0;
+    border-bottom: 1px solid var(--bgr-border);
+    width: 100%;
+    text-align: center;
+}
+
+.header__close {
+    position: absolute;
+    top: var(--indent-m);
+    right: var(--indent-m);
+}
+
+@media (min-width: $tablet) {
+    .header__burger, .header__close {
+        display: none;
+    }
+
+    .header__nav {
+        @include theme;
+        @include theme_color_primary;
+        flex-direction: row;
+        padding: 0 var(--indent-l);
+    }
+
+    .header__link {
+        border: 0;
+    }
+
+    .header__link:nth-child(2) {
+        margin-right: 100px;
+    }
+
+    .header__link:nth-child(3) {
+        margin-left: 100px;
+    }
+
+    .header__bar {
+        position: unset;
+    }
+}
