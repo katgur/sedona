@@ -1,0 +1,108 @@
+@import '../base.blocks/theme.scss';
+
+.advantages {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.advantages__title {
+    @include theme_font_xl;
+    color: var(--text-secondary);
+    margin: 0 var(--indent-s);
+    margin-top: var(--indent-xxxl);
+    text-align: center;
+}
+
+.advantages__text {
+    @include theme_font_m;
+    margin: var(--indent-m) var(--indent-s);
+    margin-bottom: var(--indent-xxxl);
+    text-align: center;
+}
+
+.advantages__figure {
+    display: flex;
+    flex-direction: column;
+}
+
+.advantages__image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.advantages__caption {
+    @include theme;
+    @include theme_color_accent;
+    padding: var(--indent-m);
+}
+
+.advantages__title_with_icon {
+    display: flex;
+    align-items: center;
+}
+
+.advantages__icon {
+    width: 50px;
+    margin-right: var(--indent-xs);
+}
+
+.advantages__text_align_left {
+    text-align: left;
+}
+
+.advantages__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.advantages__item {
+    flex: 1;
+}
+
+.advantages__list_color_secondary {
+    @include theme;
+    @include theme_color_secondary;
+}
+
+.advantages__list_color_secondary > .advantages__item {
+    border-bottom: 1px solid var(--brg-border);
+}
+
+.advantages__list_color_secondary > .advantages__item:last-child {
+    border-bottom: 0;
+}
+
+@media (min-width: $tablet) {
+    .advantages__figure, .advantages__list {
+        flex-direction: row;
+    }
+
+    .advantages__item {
+        padding: var(--indent-m);
+    }
+
+    .advantages__title_with_icon {
+        flex-direction: column;
+    }
+
+    .advantages__icon {
+        width: auto;
+        height: 80px;
+        margin-right: 0;
+        margin-bottom: var(--indent-s);
+    }
+
+    .advantages__text_align_left {
+        text-align: center;
+    }
+
+    .advantages__image {
+        width: 67%;
+    }
+    
+    .advantages__caption {
+        width: 33%;
+    }
+}

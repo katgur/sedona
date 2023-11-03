@@ -17,14 +17,14 @@ $desktop: 1080px;
     --bgr-border: #f2f2f2;
     --bgr-accent: #81b3d2;
 
-    --text-primary: #8d8d8d;
+    --text-primary: #444444;
     --text-secondary: #111111;
     --text-link: #111111;
 }
 
 @mixin theme_color_secondary {
     --bgr-default: #f2f2f2;
-    --bgr-border: #f2f2f2;
+    --bgr-border: #444444;
     --bgr-accent: #81b3d2;
 
     --text-primary: #444444;
@@ -43,10 +43,11 @@ $desktop: 1080px;
 }
 
 @mixin theme_font_xl {
-    font-size: 24px;
+    font-size: 14pt;
     font-family: 'PT Sans', sans-serif;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 700;
+    line-height: 1.5em;
 }
 
 @mixin theme_font_l {
@@ -57,9 +58,11 @@ $desktop: 1080px;
 }
 
 @mixin theme_font_m {
-    font-size: 12px;
+    font-size: 10pt;
     font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
     font-weight: 400;
+    line-height: 1.8em;
 }
 
 @mixin theme_font_s {
