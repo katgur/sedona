@@ -20,17 +20,17 @@ function html() {
 
 function style() {
     return src("source/sass/*/*.scss")
-        .pipe(concat("index.css"))
         .pipe(plumber())
         .pipe(sass())
         .pipe(postcss([
             autoprefixer()
         ]))
+        .pipe(concat("index.css"))
         .pipe(dest("dist/style/"));
 }
 
 function fonts() {
-    return src('source/font/*.ttf')
+    return src('source/font/*.woff')
         .pipe(dest('dist/font/'))
 }
 
