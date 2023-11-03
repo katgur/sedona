@@ -75,6 +75,7 @@
     }
 
     .header__bar {
-        position: unset;
+        position: absolute;
+        top: 0;
     }
 }

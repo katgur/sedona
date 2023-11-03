@@ -1,0 +1,89 @@
+@import '../base.blocks/theme.scss';
+
+.hero {
+    @include theme;
+    @include theme_color_accent;
+    padding: 84px 0;
+    background: url('../../img/hero-background.jpg') no-repeat;
+    background-color: var(--bgr-default);
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+    background-position: 60%;
+}
+
+@media (min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+    .hero {
+        background: url('../../img/hero-background.jpg') no-repeat;
+        background-color: var(--bgr-default);
+        background-size: cover;
+        background-position: 60%;
+    }
+}
+
+.hero__foreground {
+    max-width: 80%;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom: var(--indent-l) solid white;
+    border-right: 50vw solid transparent;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-bottom: var(--indent-l) solid white;
+    border-left: 50vw solid transparent;
+}
+
+.hero__triangle {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    border-bottom: var(--indent-xxxxl) solid white;
+}
+
+@media (min-width: $tablet) {
+    .hero__foreground {
+        max-width: 50%;
+    }
+
+    .hero__triangle {
+        display: block;
+    }
+
+    .hero__triangle_left {
+        left: 5vw;
+        border-right: 45vw solid transparent;
+    }
+
+    .hero__triangle_right {
+        right: 5vw;
+        border-left: 45vw solid transparent;
+    }
+}
+
+@media (min-width: $desktop) {
+    .hero::before, .hero::after, .hero__triangle {
+        border-bottom: var(--indent-xxxxl) solid white;
+    }
+
+    .hero__triangle_left {
+        left: 25vw;
+        border-right: 25vw solid transparent;
+    }
+
+    .hero__triangle_right {
+        right: 25vw;
+        border-left: 25vw solid transparent;
+    }
+}
