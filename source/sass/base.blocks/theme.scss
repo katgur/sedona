@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "PT Sans";
+    src: url('../font/PT_Sans.woff') format('woff');
+}
+
+$tablet: 768px;
+$desktop: 1080px;
+
+@mixin theme {
+    background-color: var(--bgr-default);
+    border-color: var(--bgr-border);
+    color: var(--text-primary);
+}
+
+@mixin theme_color_primary {
+    --bgr-default: #ffffff;
+    --bgr-border: #f2f2f2;
+    --bgr-accent: #81b3d2;
+
+    --text-primary: #444444;
+    --text-secondary: #111111;
+    --text-link: #111111;
+}
+
+@mixin theme_color_secondary {
+    --bgr-default: #f2f2f2;
+    --bgr-border: #444444;
+    --bgr-accent: #81b3d2;
+
+    --text-primary: #444444;
+    --text-secondary: #111111;
+    --text-link: #111111;
+}
+
+@mixin theme_color_accent {
+    --bgr-default: #81b3d2;
+    --bgr-border: #ffffff;
+    --bgr-accent: #ffffff;
+
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --text-link: #ffffff;
+}
+
+@mixin theme_font_xl {
+    font-size: 14pt;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.5em;
+}
+
+@mixin theme_font_l {
+    font-size: 10pt;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+@mixin theme_font_m {
+    font-size: 10pt;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 1.8em;
+}
+
+@mixin theme_font_s {
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.3em;
+}
+
+@mixin theme_space_default {
+    --indent-xxxs: 4px;
+    --indent-xxs: 8px;
+    --indent-xs: 12px;
+    --indent-s: 16px;
+    --indent-m: 20px;
+    --indent-l: 24px;
+    --indent-xl: 28px;
+    --indent-xxl: 32px;
+    --indent-xxxl: 36px;
+    --indent-xxxxl: 40px;
+}

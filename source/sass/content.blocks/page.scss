@@ -1,0 +1,7 @@
+@import '../base.blocks/theme.scss';
+
+.page {
+    @include theme;
+    @include theme_color_primary;
+    @include theme_space_default;
+}

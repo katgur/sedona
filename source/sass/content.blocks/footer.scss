@@ -1,0 +1,30 @@
+@import '../base.blocks/theme.scss';
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--indent-s);
+    padding: var(--indent-m);
+}
+
+.footer__title {
+    @include theme_font_xl;
+    color: var(--text-primary);
+}
+
+.footer__text {
+    @include theme_font_m;
+}
+
+.footer__socials {
+    display: flex;
+    gap: var(--indent-xs);
+}
+
+@media (min-width: $tablet) {
+    .footer__content {
+        flex-direction: row;
+    }
+}
