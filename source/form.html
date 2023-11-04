@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedona - Форма отзыва</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+
+<body class="page">
+    <header class="header">
+        <nav class="header__nav">
+            <a class="header__link" href="./index.html">Главная</a>
+            <a class="header__link" href="./photo.html">Фото и видео</a>
+            <a class="header__link" href="./form.html">Форма отзыва</a>
+            <a class="header__link" href="htmlacademy.ru">HTML Academy</a>
+            <img class="header__close" src="./img/cross.svg" alt="close">
+        </nav>
+        <menu class="header__bar">
+            <img class="header__logo" src="./img/logo.svg" alt="logo">
+            <img class="header__burger" src="./img/burger.svg" alt="menu">
+        </menu>
+    </header>
+    <main>
+        <section class="hero">
+            <img class="hero__foreground" src="./img/welcome-small.svg" alt="Надпись: Седона">
+            <div class="hero__triangle hero__triangle_left"></div>
+            <div class="hero__triangle hero__triangle_right"></div>
+        </section>
+        <section class="page__section">
+            <div class="page__foreground">
+                <h2 class="page__title">Оставьте свой отзыв</h2>
+                <p class="page__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nisi
+                    commodi soluta rem expedita repellat. Ab velit necessitatibus adipisci ipsa?</p>
+            </div>
+        </section>
+        <form class="form">
+            <section class="form__section form__section--half">
+                <h2 class="form__title">Представьтесь:</h2>
+                <label class="form__label" class="form__label" for="name">
+                    <span class="form__text">Имя*:</span>
+                    <input class="form__input" placeholder="Петр" id="name" name="name" type="text">
+                </label>
+                <label class="form__label" for="surname">
+                    <span class="form__text">Фамилия*:</span>
+                    <input class="form__input" placeholder="Иванов" id="surname" name="surname" type="text">
+                </label>
+                <label class="form__label" for="middlename">
+                    <span class="form__text">Отчество:</span>
+                    <input class="form__input" placeholder="Александрович" id="middlename" name="middlename" type="text">
+                </label>
+            </section>
+            <section class="form__section form__section--full">
+                <h2 class="form__title">Контактная информация:</h2>
+                <label class="form__label" for="phone">
+                    <span class="form__text">Контактный телефон*:</span>
+                    <input class="form__input form__input--phone" placeholder="Введите телефон" id="phone" name="phone" type="tel">
+                </label>
+                <label class="form__label" for="mail">
+                    <span class="form__text">Электронная почта*:</span>
+                    <input class="form__input form__input--email" placeholder="Введите e-mail" id="mail" name="mail" type="email">
+                </label>
+            </section>
+            <section class="form__section form__section--half form__section--first">
+                <h2 class="form__title">Ваше общее впечатление:</h2>
+                <label class="form__label" for="good">
+                    <input class="form__input form__input--radio" id="good" name="impression" value="good" type="radio" checked />
+                    <span class="form__text form__text--small">Скорее положительное</span>
+                </label>
+                <label class="form__label" for="bad">
+                    <input class="form__input form__input--radio" id="bad" name="impression" value="bad" type="radio" />
+                    <span class="form__text form__text--small">Скорее отицательное</span>
+                </label>
+                <label class="form__label" for="no-answer">
+                    <input class="form__input form__input--radio" id="no-answer" name="impression" value="no-answer" type="radio" />
+                    <span class="form__text form__text--small">Затрудняюсь ответить</span>
+                </label>
+            </section>
+            <section class="form__section form__section--full">
+                <h2 class="form__title">Посещенные достопримечательности:</h2>
+                <label class="form__label" for="devil-bridge">
+                    <input class="form__input form__input--checkbox" id="devil-bridge" name="devil-bridge" type="checkbox" />
+                    <span class="form__text form__text--small">Мост Дьявола</span>
+                </label>
+                <label class="form__label" for="devil-bridge">
+                    <input class="form__input form__input--checkbox" id="bell-mt" name="bell-mt" type="checkbox" />
+                    <span class="form__text form__text--small">Гора-колокол</span>
+                </label>
+                <label class="form__label" for="slide-park">
+                    <input class="form__input form__input--checkbox" id="slide-park" name="slide-park" type="checkbox" />
+                    <span class="form__text form__text--small">Слайд-парк</span>
+                </label>
+                <label class="form__label" for="red-cliffs">
+                    <input class="form__input form__input--checkbox" id="red-cliffs" name="red-cliffs" type="checkbox" />
+                    <span class="form__text form__text--small">Красные скалы</span>
+                </label>
+            </section>
+            <section class="form__section form__section--full">
+                <h2 class="form__title">Опишите свои эмоции:</h2>
+                <textarea class="form__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
+            </section>
+            <div class="form__submit">
+                <button class="form__button" type="submit">Отправить отзыв</button>
+                <p>* — Обязательные поля</p>
+            </div>
+        </form>
+    </main>
+    <footer class="footer">
+        <p class="footer__title">#visitsedona</p>
+        <div class="footer__socials">
+            <img src="./img/social-telegram.svg" alt="telegram link">
+            <img src="./img/social-vk.svg" alt="vk link">
+            <img src="./img/social-youtube.svg" alt="youtube link">
+        </div>
+        <img src="./img/logo_htmlacademy.png" alt="logo html academy">
+    </footer>
+</body>
+
+</html>
