@@ -1,0 +1,174 @@
+@import '../base.blocks/theme.scss';
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--indent-xxxl);
+}
+
+.form__section {
+    border-top: 1px solid var(--bgr-border);
+    padding: var(--indent-m);
+}
+
+.form__section:last-child {
+    border-bottom: 1px solid var(--bgr-border);
+}
+
+.form__title {
+    @include theme_font_xl;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.form__label {
+    display: flex;
+    padding: var(--indent-s);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form__text {
+    @include theme_font_m;
+    margin-left: var(--indent-s);
+}
+
+.form__text--small {
+    @include theme_font_s;
+    text-transform: none;
+    font-weight: 700;
+}
+
+.form__input {
+    @include theme;
+    @include theme_color_secondary;
+    @include theme_font_s;
+    font-weight: 700;
+    flex: 1;
+    margin-left: var(--indent-xs);
+    padding: var(--indent-xs);
+}
+
+.form__input--phone {
+    flex-basis: 100%;
+    margin-left: 0;
+    position: relative;
+}
+
+.form__input--email {
+    flex-basis: 100%;
+    margin-left: 0;
+    position: relative;
+}
+
+.form__input--phone::after {
+    background: url('../../img/phone.svg');
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    width: 58px;
+    height: 58px;
+}
+
+.form__input--email::after {
+    background: url('../../img/mail.svg');
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    width: 58px;
+    height: 58px;
+}
+
+.form__input--radio {
+    @include theme;
+    @include theme_color_secondary;
+    flex-grow: 0;
+    appearance: none;
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    border: 4px solid var(--bgr-default);
+}
+
+.form__input--radio:checked {
+    background: var(--bgr-accent);
+}
+
+.form__input--checkbox {
+    flex-grow: 0;
+    appearance: none;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.form__input--checkbox:checked {
+    background: url('../../img/tick.svg') no-repeat;
+    background-size: 18px;
+    background-position: 50%;
+    background-color: var(--bgr-default);
+}
+
+.form__textarea {
+    appearance: none;
+    border: 0;
+    @include theme;
+    @include theme_color_secondary;
+    @include theme_font_s;
+    font-weight: 700;
+    width: 100%;
+    height: 150px;
+    resize: none;
+    padding: var(--indent-m);
+    margin-top: var(--indent-m);
+}
+
+.form__button {
+    @include theme;
+    @include theme_color_accent;
+    @include theme_font_l;
+    padding: var(--indent-xs);
+    border: 0;
+}
+
+@media (min-width: $tablet) {
+    .form {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .form__section {
+        border-top: 0;
+    }
+
+    .form__section--half {
+        width: 50%;
+        border-right: 1px solid var(--bgr-border);
+    }
+
+    .form__section--half:last-child {
+        border-right: 0;
+    }
+
+    .form__section--full {
+        width: 100%;
+    }
+
+    .form__section--first {
+        order: -1;
+    }
+
+    .form__submit {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .form__button {
+        width: 50%;
+    }
+}
