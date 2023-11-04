@@ -1,6 +1,6 @@
 @font-face {
     font-family: "PT Sans";
-    src: url('../font/PT_Sans.woff') format('woff');
+    src: url('../../font/PT_Sans.woff') format('woff');
 }
 
 $tablet: 768px;
@@ -14,7 +14,7 @@ $desktop: 1080px;
 
 @mixin theme_color_primary {
     --bgr-default: #ffffff;
-    --bgr-border: #f2f2f2;
+    --bgr-border: #eaeaea;
     --bgr-accent: #81b3d2;
 
     --text-primary: #444444;
@@ -34,6 +34,16 @@ $desktop: 1080px;
 
 @mixin theme_color_accent {
     --bgr-default: #81b3d2;
+    --bgr-border: #ffffff;
+    --bgr-accent: #ffffff;
+
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --text-link: #ffffff;
+}
+
+@mixin theme_color_hover {
+    --bgr-default: rgba(0, 0, 0, 0.5);;
     --bgr-border: #ffffff;
     --bgr-accent: #ffffff;
 
@@ -66,8 +76,8 @@ $desktop: 1080px;
 }
 
 @mixin theme_font_s {
-    font-size: 14px;
-    font-family: 'Arial', sans-serif;
+    font-size: 10pt;
+    font-family: 'PT Sans', sans-serif;
     line-height: 1.3em;
 }
 
