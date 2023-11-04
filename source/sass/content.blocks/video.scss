@@ -1,0 +1,40 @@
+@import '../base.blocks/theme.scss';
+
+.video {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    margin-bottom: var(--indent-xl);
+}
+
+.video__image {
+    width: 100%;
+}
+
+.video__caption {
+    @include theme;
+    @include theme_color_hover;
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--indent-xl);
+    gap: var(--indent-m);
+}
+
+
+.video__input {
+    appearance: none;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    accent-color: white;
+    height: 4px;
+}
+
+@media (min-width: $tablet) {
+    .video {
+        width: fit-content;
+    }
+}
