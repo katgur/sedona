@@ -1,14 +1,16 @@
 @import '../base.blocks/theme.scss';
 
 .form {
+    @include theme;
+    @include theme_color_primary;
     display: flex;
     flex-direction: column;
-    margin-bottom: var(--indent-xxxl);
+    padding-bottom: var(--indent-xxxl);
 }
 
 .form__section {
     border-top: 1px solid var(--bgr-border);
-    padding: var(--indent-m);
+    padding: var(--indent-m) 0;
 }
 
 .form__section:last-child {
@@ -46,7 +48,7 @@
     font-weight: 700;
     flex: 1;
     margin-left: var(--indent-xs);
-    padding: var(--indent-xs);
+    padding: var(--indent-s);
 }
 
 .form__input--phone {

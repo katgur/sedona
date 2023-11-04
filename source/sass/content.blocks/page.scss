@@ -32,12 +32,36 @@
 }
 
 @media (min-width: $tablet) {
+    .page {
+        background-color: var(--bgr-default);
+    }
+
+    .page__fit {
+        width: 700px;
+        margin: 0 auto;
+    }
+
     .page__foreground {
         width: 60%;
     }
 }
 
 @media (min-width: $desktop) {
+    .page {
+        width: 1000px;
+        margin: 0 auto;
+        background-color: var(--bgr-border);
+        box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+    }
+
+    .page__main {
+        background-color: var(--bgr-default);
+    }
+
+    .page__section {
+        background: var(--bgr-default);
+    }
+
     .page__foreground {
         width: 50%;
     }

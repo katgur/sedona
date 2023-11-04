@@ -1,6 +1,8 @@
 @import '../base.blocks/theme.scss';
 
 .footer {
+    @include theme;
+    @include theme_color_primary;
     display: flex;
     flex-direction: column;
     align-items: center;
