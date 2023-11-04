@@ -5,3 +5,40 @@
     @include theme_color_primary;
     @include theme_space_default;
 }
+
+.page__foreground {
+    padding: var(--indent-xl);
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page__title {
+    @include theme_font_xl;
+    color: var(--text-secondary);
+}
+
+.page__text {
+    @include theme_font_m;
+    margin: var(--indent-xl) auto;
+}
+
+.page__link {
+    @include theme;
+    @include theme_color_accent;
+    @include theme_font_xl;
+    display: block;
+    padding: var(--indent-s);
+}
+
+@media (min-width: $tablet) {
+    .page__foreground {
+        width: 60%;
+    }
+}
+
+@media (min-width: $desktop) {
+    .page__foreground {
+        width: 50%;
+    }
+}

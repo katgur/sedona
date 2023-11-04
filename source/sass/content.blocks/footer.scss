@@ -1,6 +1,6 @@
 @import '../base.blocks/theme.scss';
 
-.footer__content {
+.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,7 +24,7 @@
 }
 
 @media (min-width: $tablet) {
-    .footer__content {
+    .footer {
         flex-direction: row;
     }
 }
