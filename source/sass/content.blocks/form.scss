@@ -1,9 +1,11 @@
 @import '../base.blocks/theme.scss';
 
 .form {
+    @include theme;
+    @include theme_color_primary;
     display: flex;
     flex-direction: column;
-    margin-bottom: var(--indent-xxxl);
+    padding-bottom: var(--indent-xxxl);
 }
 
 .form__section {

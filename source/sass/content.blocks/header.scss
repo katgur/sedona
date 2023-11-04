@@ -60,7 +60,6 @@
         @include theme_color_primary;
         flex-direction: row;
         padding: 0 var(--indent-l);
-        background-color: transparent;
     }
 
     .header__link {
@@ -78,6 +77,10 @@
     .header__bar {
         position: absolute;
         top: 0;
-        z-index: -1;
+        padding: 0;
+    }
+
+    .header__logo {
+        z-index: 100;
     }
 }
