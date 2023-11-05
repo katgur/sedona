@@ -29,6 +29,7 @@
 
 .advantages__image {
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -98,12 +99,12 @@
     .advantages__text_align_left {
         text-align: center;
     }
-
-    .advantages__image {
-        width: 67%;
-    }
     
     .advantages__caption {
-        width: 33%;
+        flex-basis: 33%;
+    }
+
+    .advantages__image {
+        flex-basis: 67%;
     }
 }

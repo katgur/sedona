@@ -17,7 +17,10 @@
             <img class="header__close" src="./img/cross.svg" alt="close">
         </nav>
         <menu class="header__bar">
-            <img class="header__logo" src="./img/logo.svg" alt="logo">
+            <picture>
+                <source media="(min-width: 1080px)" srcset="./img/logo.svg">
+                <img class="header__logo" src="./img/logo-small.svg" alt="logo">
+            </picture>
             <img class="header__burger" src="./img/burger.svg" alt="menu">
         </menu>
     </header>
@@ -41,7 +44,13 @@
                     <p class="advantages__text">— №1 —</p>
                     <p class="advantages__text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
                 </figcaption>
-                <img class="advantages__image" src="./img/advantage-1.jpg" alt="Город">
+                <picture>
+                    <source type="image/webp" srcset="./img/index-1.webp 1x, ./img/index-1@2x.webp 2x">
+                    <source srcset="./img/advantage-1.jpg 1x, ./img/advantage-1@2x.jpg 2x">
+                    <img class="advantages__image" src="./img/advantage-1.jpg"
+                        srcset="./img/advantage-1@2x.jpg 2x"
+                        alt="Городской отель, на заднем фоне которого виднеются горы">
+                </picture>
             </figure>
             <ul class="advantages__list">
                 <li class="advantages__item">
@@ -70,7 +79,13 @@
                 </li>
             </ul>
             <figure class="advantages__figure">
-                <img class="advantages__image" src="./img/advantage-2.jpg" alt="Каньон">
+                <picture>
+                    <source type="image/webp" srcset="./img/index-2.webp 1x, ./img/index-2@2x.webp 2x">
+                    <source srcset="./img/advantage-2.jpg 1x, ./img/advantage-2@2x.jpg 2x">
+                    <img class="advantages__image" src="./img/advantage-2.jpg"
+                        srcset="./img/advantage-2@2x.jpg 2x"
+                        alt="Скалистые горы красного цвета и на переднем плане каньон с растущими в нем деревьями">
+                </picture>
                 <figcaption class="advantages__caption">
                     <h2 class="advantages__title">Там есть мост дьявола</h2>
                     <p class="advantages__text">— №2 —</p>

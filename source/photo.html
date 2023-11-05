@@ -38,7 +38,17 @@
         <ul class="photos">
             <li class="photos__item">
                 <figure class="photos__figure">
-                    <img class="photos__image" src="./img/photo-01-desktop.webp" alt="Неродные просторы">
+                    <picture>
+                        <source media="(min-width: 768px)" type="image/webp"
+                            srcset="./img/photo-01-desktop.webp 1x, ./img/photo-01-desktop@2x.webp 2x" />
+                        <source type="image/webp"
+                            srcset="./img/photo-1-mobile.webp 1x, ./img/photo-1-mobile@2x.webp 2x" />
+                        <source media="(min-width: 768px)"
+                            srcset="./img/photo-01-desktop.jpg 1x, ./img/photo-01-desktop@2x.jpg 2x" />
+                        <source srcset="./img/photo-1-mobile.jpg 1x, ./img/photo-1-mobile@2x.jpg 2x" />
+                        <img class="photos__image" src="./img/photo-1-mobile.jpg"
+                            srcset="./img/photo-1-mobile@2x.jpg 2x" alt="Неродные просторы">
+                    </picture>
                     <figcaption class="photos__caption">
                         <p>
                             <span class="photos__text">Неродные просторы</span>
@@ -53,7 +63,12 @@
             </li>
             <li class="photos__item">
                 <figure class="photos__figure">
-                    <img class="photos__image" src="./img/photo-2.webp" alt="Мeстная растительность">
+                    <picture>
+                        <source type="image/webp" srcset="./img/photo-2.webp 1x, ./img/photo-2@2x.webp 2x" />
+                        <source srcset="./img/photo-2.jpg 1x, ./img/photo-2@2x.jpg 2x" />
+                        <img class="photos__image" src="./img/photo-2.jpg" srcset="./img/photo-2@2x.jpg 2x"
+                            alt="Мeстная растительность">
+                    </picture>
                     <figcaption class="photos__caption">
                         <p>
                             <span class="photos__text">Мeстная растительность</span>
@@ -68,7 +83,12 @@
             </li>
             <li class="photos__item">
                 <figure class="photos__figure">
-                    <img class="photos__image" src="./img/photo-3.webp" alt="Дорога на север">
+                    <picture>
+                        <source type="image/webp" srcset="./img/photo-3.webp 1x, ./img/photo-3@2x.webp 2x" />
+                        <source srcset="./img/photo-3.jpg 1x, ./img/photo-3@2x.jpg 2x" />
+                        <img class="photos__image" src="./img/photo-3.jpg" srcset="./img/photo-3@2x.jpg 2x"
+                            alt="Дорога на север">
+                    </picture>
                     <figcaption class="photos__caption">
                         <p>
                             <span class="photos__text">Дорога на север</span>
@@ -83,7 +103,12 @@
             </li>
             <li class="photos__item">
                 <figure class="photos__figure">
-                    <img class="photos__image" src="./img/photo-4.webp" alt="Мост дьявола">
+                    <picture>
+                        <source type="image/webp" srcset="./img/photo-4.webp 1x, ./img/photo-4@2x.webp 2x" />
+                        <source srcset="./img/photo-4.jpg 1x, ./img/photo-4@2x.jpg 2x" />
+                        <img class="photos__image" src="./img/photo-4.jpg" srcset="./img/photo-4@2x.jpg 2x"
+                            alt="Мост дьявола">
+                    </picture>
                     <figcaption class="photos__caption">
                         <p>
                             <span class="photos__text">Мост дьявола</span>
