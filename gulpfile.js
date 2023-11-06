@@ -61,7 +61,7 @@ function scripts() {
 }
 
 function serve() {
-    server.create().init({
+    server.init({
         server: 'dist',
         cors: true
     });
