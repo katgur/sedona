@@ -16,7 +16,7 @@
 @media (min-resolution: 144dpi),
 (min-resolution: 1.5dppx) {
     .hero {
-        background: url('../../img/hero-background.jpg') no-repeat;
+        background: url('../../img/hero-background@2x.jpg') no-repeat;
         background-color: var(--bgr-default);
         background-size: cover;
         background-position: 60%;

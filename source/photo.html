@@ -38,7 +38,17 @@
         <ul class="photos">
             <li class="photos__item">
                 <figure class="photos__figure">
-                    <img class="photos__image" src="./img/photo-01-desktop.webp" alt="Неродные просторы">
+                    <picture>
+                        <source media="(min-width: 768px)" type="image/webp"
+                            srcset="./img/photo-01-desktop.webp 1x, ./img/photo-01-desktop@2x.webp 2x" />
+                        <source type="image/webp"
+                            srcset="./img/photo-1-mobile.webp 1x, ./img/photo-1-mobile@2x.webp 2x" />
+                        <source media="(min-width: 768px)"
+                            srcset="./img/photo-01-desktop.jpg 1x, ./img/photo-01-desktop@2x.jpg 2x" />
+                        <source srcset="./img/photo-1-mobile.jpg 1x, ./img/photo-1-mobile@2x.jpg 2x" />
+                        <img class="photos__image" src="./img/photo-1-mobile.jpg"
+                            srcset="./img/photo-1-mobile@2x.jpg 2x" alt="Неродные просторы">
+                    </picture>
                     <figcaption class="photos__caption">
                         <p>
                             <span class="photos__text">Неродные просторы</span>
@@ -53,7 +63,12 @@
             </li>
             <li class="photos__item">
                 <figure class="photos__figure">
-                    <img class="photos__image" src="./img/photo-2.webp" alt="Мeстная растительность">
+                    <picture>
+                        <source type="image/webp" srcset="./img/photo-2.webp 1x, ./img/photo-2@2x.webp 2x" />
+                        <source srcset="./img/photo-2.jpg 1x, ./img/photo-2@2x.jpg 2x" />
+                        <img class="photos__image" src="./img/photo-2.jpg" srcset="./img/photo-2@2x.jpg 2x"
+                            alt="Мeстная растительность">
+                    </picture>
                     <figcaption class="photos__caption">
                         <p>
                             <span class="photos__text">Мeстная растительность</span>
@@ -68,7 +83,12 @@
             </li>
             <li class="photos__item">
                 <figure class="photos__figure">
-                    <img class="photos__image" src="./img/photo-3.webp" alt="Дорога на север">
+                    <picture>
+                        <source type="image/webp" srcset="./img/photo-3.webp 1x, ./img/photo-3@2x.webp 2x" />
+                        <source srcset="./img/photo-3.jpg 1x, ./img/photo-3@2x.jpg 2x" />
+                        <img class="photos__image" src="./img/photo-3.jpg" srcset="./img/photo-3@2x.jpg 2x"
+                            alt="Дорога на север">
+                    </picture>
                     <figcaption class="photos__caption">
                         <p>
                             <span class="photos__text">Дорога на север</span>
@@ -83,7 +103,12 @@
             </li>
             <li class="photos__item">
                 <figure class="photos__figure">
-                    <img class="photos__image" src="./img/photo-4.webp" alt="Мост дьявола">
+                    <picture>
+                        <source type="image/webp" srcset="./img/photo-4.webp 1x, ./img/photo-4@2x.webp 2x" />
+                        <source srcset="./img/photo-4.jpg 1x, ./img/photo-4@2x.jpg 2x" />
+                        <img class="photos__image" src="./img/photo-4.jpg" srcset="./img/photo-4@2x.jpg 2x"
+                            alt="Мост дьявола">
+                    </picture>
                     <figcaption class="photos__caption">
                         <p>
                             <span class="photos__text">Мост дьявола</span>
@@ -117,12 +142,29 @@
     </main>
     <footer class="footer">
         <p class="footer__title">#visitsedona</p>
-        <div class="footer__socials">
-            <img src="./img/social-telegram.svg" alt="telegram link">
-            <img src="./img/social-vk.svg" alt="vk link">
-            <img src="./img/social-youtube.svg" alt="youtube link">
-        </div>
-        <img src="./img/logo_htmlacademy.png" alt="logo html academy">
+        <ul class="footer__socials">
+            <li class="footer__social">
+                <svg width="18" height="18" role="img" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#icon-twitter"></use>
+                </svg>
+            </li>
+            <li class="footer__social">
+                <svg width="18" height="18" role="img" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
+            </li>
+            <li class="footer__social">
+                <svg width="18" height="18" role="img" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#icon-youtube"></use>
+                </svg>
+            </li>
+        </ul>
+        <a class="footer__logo" href="https://htmlacademy.org/">
+            Разработано
+            <svg width="27" height="34" role="img" aria-hidden="true">
+                <use xlink:href="./img/sprite.svg#htmlacademy"></use>
+            </svg>
+        </a>
     </footer>
 </body>
 
