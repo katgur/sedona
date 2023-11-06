@@ -4,7 +4,7 @@
     @include theme;
     @include theme_color_accent;
     padding: 84px 0;
-    background: url('../../img/hero-background.jpg') no-repeat;
+    background: url('../../img/hero-background.webp') no-repeat;
     background-color: var(--bgr-default);
     background-size: cover;
     text-align: center;
@@ -16,7 +16,7 @@
 @media (min-resolution: 144dpi),
 (min-resolution: 1.5dppx) {
     .hero {
-        background: url('../../img/hero-background@2x.jpg') no-repeat;
+        background: url('../../img/hero-background@2x.webp') no-repeat;
         background-color: var(--bgr-default);
         background-size: cover;
         background-position: 60%;
