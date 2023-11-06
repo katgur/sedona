@@ -25,6 +25,19 @@
     gap: var(--indent-xs);
 }
 
+.footer__social {
+    @include theme;
+    @include theme_color_accent;
+    padding: var(--indent-xs);
+}
+
+.footer__logo {
+    @include theme_font_m;
+    display: flex;
+    align-items: center;
+    gap: var(--indent-xxs);
+}
+
 @media (min-width: $tablet) {
     .footer {
         flex-direction: row;

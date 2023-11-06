@@ -47,8 +47,7 @@
                 <picture>
                     <source type="image/webp" srcset="./img/index-1.webp 1x, ./img/index-1@2x.webp 2x">
                     <source srcset="./img/advantage-1.jpg 1x, ./img/advantage-1@2x.jpg 2x">
-                    <img class="advantages__image" src="./img/advantage-1.jpg"
-                        srcset="./img/advantage-1@2x.jpg 2x"
+                    <img class="advantages__image" src="./img/advantage-1.jpg" srcset="./img/advantage-1@2x.jpg 2x"
                         alt="Городской отель, на заднем фоне которого виднеются горы">
                 </picture>
             </figure>
@@ -82,8 +81,7 @@
                 <picture>
                     <source type="image/webp" srcset="./img/index-2.webp 1x, ./img/index-2@2x.webp 2x">
                     <source srcset="./img/advantage-2.jpg 1x, ./img/advantage-2@2x.jpg 2x">
-                    <img class="advantages__image" src="./img/advantage-2.jpg"
-                        srcset="./img/advantage-2@2x.jpg 2x"
+                    <img class="advantages__image" src="./img/advantage-2.jpg" srcset="./img/advantage-2@2x.jpg 2x"
                         alt="Скалистые горы красного цвета и на переднем плане каньон с растущими в нем деревьями">
                 </picture>
                 <figcaption class="advantages__caption">
@@ -125,12 +123,29 @@
     </main>
     <footer class="footer">
         <p class="footer__title">#visitsedona</p>
-        <div class="footer__socials">
-            <img src="./img/social-telegram.svg" alt="telegram link">
-            <img src="./img/social-vk.svg" alt="vk link">
-            <img src="./img/social-youtube.svg" alt="youtube link">
-        </div>
-        <img src="./img/logo_htmlacademy.png" alt="logo html academy">
+        <ul class="footer__socials">
+            <li class="footer__social">
+                <svg width="18" height="18" role="img" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#icon-twitter"></use>
+                </svg>
+            </li>
+            <li class="footer__social">
+                <svg width="18" height="18" role="img" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
+            </li>
+            <li class="footer__social">
+                <svg width="18" height="18" role="img" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#icon-youtube"></use>
+                </svg>
+            </li>
+        </ul>
+        <a class="footer__logo" href="https://htmlacademy.org/">
+            Разработано
+            <svg width="27" height="34" role="img" aria-hidden="true">
+                <use xlink:href="./img/sprite.svg#htmlacademy"></use>
+            </svg>
+        </a>
     </footer>
 </body>
 

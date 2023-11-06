@@ -47,24 +47,28 @@
                 </label>
                 <label class="form__label" for="middlename">
                     <span class="form__text">Отчество:</span>
-                    <input class="form__input" placeholder="Александрович" id="middlename" name="middlename" type="text">
+                    <input class="form__input" placeholder="Александрович" id="middlename" name="middlename"
+                        type="text">
                 </label>
             </section>
             <section class="form__section form__section--full">
                 <h2 class="form__title">Контактная информация:</h2>
                 <label class="form__label" for="phone">
                     <span class="form__text">Контактный телефон*:</span>
-                    <input class="form__input form__input--phone" placeholder="Введите телефон" id="phone" name="phone" type="tel">
+                    <input class="form__input form__input--phone" placeholder="Введите телефон" id="phone" name="phone"
+                        type="tel">
                 </label>
                 <label class="form__label" for="mail">
                     <span class="form__text">Электронная почта*:</span>
-                    <input class="form__input form__input--email" placeholder="Введите e-mail" id="mail" name="mail" type="email">
+                    <input class="form__input form__input--email" placeholder="Введите e-mail" id="mail" name="mail"
+                        type="email">
                 </label>
             </section>
             <section class="form__section form__section--half form__section--first">
                 <h2 class="form__title">Ваше общее впечатление:</h2>
                 <label class="form__label" for="good">
-                    <input class="form__input form__input--radio" id="good" name="impression" value="good" type="radio" checked />
+                    <input class="form__input form__input--radio" id="good" name="impression" value="good" type="radio"
+                        checked />
                     <span class="form__text form__text--small">Скорее положительное</span>
                 </label>
                 <label class="form__label" for="bad">
@@ -72,14 +76,16 @@
                     <span class="form__text form__text--small">Скорее отицательное</span>
                 </label>
                 <label class="form__label" for="no-answer">
-                    <input class="form__input form__input--radio" id="no-answer" name="impression" value="no-answer" type="radio" />
+                    <input class="form__input form__input--radio" id="no-answer" name="impression" value="no-answer"
+                        type="radio" />
                     <span class="form__text form__text--small">Затрудняюсь ответить</span>
                 </label>
             </section>
             <section class="form__section form__section--full">
                 <h2 class="form__title">Посещенные достопримечательности:</h2>
                 <label class="form__label" for="devil-bridge">
-                    <input class="form__input form__input--checkbox" id="devil-bridge" name="devil-bridge" type="checkbox" />
+                    <input class="form__input form__input--checkbox" id="devil-bridge" name="devil-bridge"
+                        type="checkbox" />
                     <span class="form__text form__text--small">Мост Дьявола</span>
                 </label>
                 <label class="form__label" for="devil-bridge">
@@ -87,11 +93,13 @@
                     <span class="form__text form__text--small">Гора-колокол</span>
                 </label>
                 <label class="form__label" for="slide-park">
-                    <input class="form__input form__input--checkbox" id="slide-park" name="slide-park" type="checkbox" />
+                    <input class="form__input form__input--checkbox" id="slide-park" name="slide-park"
+                        type="checkbox" />
                     <span class="form__text form__text--small">Слайд-парк</span>
                 </label>
                 <label class="form__label" for="red-cliffs">
-                    <input class="form__input form__input--checkbox" id="red-cliffs" name="red-cliffs" type="checkbox" />
+                    <input class="form__input form__input--checkbox" id="red-cliffs" name="red-cliffs"
+                        type="checkbox" />
                     <span class="form__text form__text--small">Красные скалы</span>
                 </label>
             </section>
@@ -107,12 +115,29 @@
     </main>
     <footer class="footer">
         <p class="footer__title">#visitsedona</p>
-        <div class="footer__socials">
-            <img src="./img/social-telegram.svg" alt="telegram link">
-            <img src="./img/social-vk.svg" alt="vk link">
-            <img src="./img/social-youtube.svg" alt="youtube link">
-        </div>
-        <img src="./img/logo_htmlacademy.png" alt="logo html academy">
+        <ul class="footer__socials">
+            <li class="footer__social">
+                <svg width="18" height="18" role="img" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#icon-twitter"></use>
+                </svg>
+            </li>
+            <li class="footer__social">
+                <svg width="18" height="18" role="img" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#icon-facebook"></use>
+                </svg>
+            </li>
+            <li class="footer__social">
+                <svg width="18" height="18" role="img" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#icon-youtube"></use>
+                </svg>
+            </li>
+        </ul>
+        <a class="footer__logo" href="https://htmlacademy.org/">
+            Разработано
+            <svg width="27" height="34" role="img" aria-hidden="true">
+                <use xlink:href="./img/sprite.svg#htmlacademy"></use>
+            </svg>
+        </a>
     </footer>
 </body>
 
