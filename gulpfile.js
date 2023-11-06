@@ -9,8 +9,9 @@ import minify from "gulp-csso";
 import server from "browser-sync";
 import gulpclean from 'gulp-clean';
 import rename from "gulp-rename";
-import imagemin from "gulp-imagemin";
 import convertwebp from "gulp-webp";
+import jsmin from 'gulp-jsmin';
+import htmlmin from 'gulp-htmlmin';
 
 function clean() {
     return src('dist/', { read: false })
@@ -19,6 +20,7 @@ function clean() {
 
 function html() {
     return src("source/*.html")
+        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(dest("dist/"));
 }
 
@@ -53,6 +55,8 @@ function webp() {
 
 function scripts() {
     return src("source/js/*.js")
+        .pipe(jsmin())
+        .pipe(rename({ suffix: '.min' }))
         .pipe(dest('dist/js'))
 }
 
