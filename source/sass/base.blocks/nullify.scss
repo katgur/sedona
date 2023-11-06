@@ -37,10 +37,17 @@ p {
 }
 
 a:link,
-a:visited,
-a:hover,
-a:active {
+a:visited {
     color: var(--text-link);
+}
+
+a:hover {
+    color: var(--bgr-accent);
+    background-color: var(--bgr-hover);
+}
+
+a:active {
+    color: var(--text-primary);
 }
 
 figure {

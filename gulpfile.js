@@ -66,9 +66,7 @@ function serve() {
         cors: true
     });
 
-    watch("source/*.html").on("change", series(html, server.reload));
     watch("source/**/*.{scss,sass}").on("change", series(style, server.reload));
-    watch("source/**/*.js").on("change", series(scripts, server.reload));
 }
 
 export const build = series(clean, html, fonts, images, webp, style, scripts);
