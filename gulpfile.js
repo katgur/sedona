@@ -1,12 +1,16 @@
-const { series, watch, src, dest } = require("gulp");
-const sass = require('gulp-sass')(require('sass'));
-const plumber = require("gulp-plumber");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const concat = require("gulp-concat-css")
-const replace = require("gulp-replace")
-const server = require("browser-sync").create();
-const gulpclean = require('gulp-clean');
+import gulp from "gulp";
+const { series, watch, src, dest } = gulp;
+import sass from 'gulp-dart-sass';
+import plumber from "gulp-plumber";
+import postcss from "gulp-postcss";
+import autoprefixer from "autoprefixer";
+import concat from "gulp-concat-css";
+import minify from "gulp-csso";
+import server from "browser-sync";
+import gulpclean from 'gulp-clean';
+import rename from "gulp-rename";
+import imagemin from "gulp-imagemin";
+import convertwebp from "gulp-webp";
 
 function clean() {
     return src('dist/', { read: false })
@@ -26,6 +30,8 @@ function style() {
             autoprefixer()
         ]))
         .pipe(concat("index.css"))
+        .pipe(minify())
+        .pipe(rename("index.min.css"))
         .pipe(dest("dist/style/"));
 }
 
@@ -39,13 +45,19 @@ function images() {
         .pipe(dest('dist/img'))
 }
 
+function webp() {
+    return src("dist/img/*.{png,jpg}")
+        .pipe(convertwebp({ quality: 90 }))
+        .pipe(dest("dist/img/"));
+}
+
 function scripts() {
     return src("source/js/*.js")
         .pipe(dest('dist/js'))
 }
 
 function serve() {
-    server.init({
+    server.create().init({
         server: 'dist',
         cors: true
     });
@@ -55,5 +67,5 @@ function serve() {
     watch("source/**/*.js").on("change", series(scripts, server.reload));
 }
 
-exports.build = series(clean, html, fonts, images, style, scripts)
-exports.default = series(clean, html, fonts, images, style, scripts, serve)
+export const build = series(clean, html, fonts, images, webp, style, scripts);
+export default series(clean, html, fonts, images, webp, style, scripts, serve);
